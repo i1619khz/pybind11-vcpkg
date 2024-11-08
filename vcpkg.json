@@ -1,0 +1,8 @@
+{
+  "dependencies": [
+    "fmt",
+    "opencv",
+    "spdlog",
+    "pybind11"
+  ]
+}
