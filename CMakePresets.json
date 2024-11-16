@@ -1,0 +1,13 @@
+{
+  "version": 8,
+  "configurePresets": [
+    {
+      "name": "vcpkg",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build", //构建目录
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake" //vcpkg和cmake之间的联动
+      }
+    }
+  ]
+}

@@ -1,10 +1,13 @@
 cmake_minimum_required(VERSION 3.29)
-project(quickcraft_dpv LANGUAGES CXX)
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(DCMAKE_MAKE_PROGRAM ninja)
+set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake")
+set(pybind11_DIR "$ENV{VCPKG_ROOT}/installed/x64-windows/share/pybind11")
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_SHELL "powershell.exe")
 set(PYBIND11_FINDPYTHON ON)
-set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake")
-set(pybind11_DIR "$ENV{VCPKG_ROOT}/installed/x64-windows/share/pybind11")
+project(pybind11_vcpkg LANGUAGES CXX)
 
 # 找到 Python3 解释器及开发库
 find_package(Python3 REQUIRED COMPONENTS Interpreter Development)

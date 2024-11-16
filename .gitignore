@@ -3,6 +3,7 @@
 node_modules
 dist
 .git
+.cache
 
 build
 vcpkg_installed
